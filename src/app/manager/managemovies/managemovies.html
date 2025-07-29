@@ -1,0 +1,75 @@
+<br>
+<div class="container-fluid">
+    <div class="row">
+           <h1 class="d-flex justify-content-center">Manage Movies :</h1>
+        <div class="col-md-3" *ngFor="let mm of mymovies ">
+            <div class="card mt-3 mb-3">
+                <div class="card-header">
+                    <img [src]="mm.movieimage" alt="" id="myimg" >
+                     <h4 class="mt-2">{{mm.moviename}}</h4>
+                </div>
+                <div class="card-body">
+                      <p>{{mm.movietype}}</p>
+                         <h5><span> Price : ₹ {{mm.movieprice}}</span></h5>
+                </div>
+                <div class="card-footer">
+                  
+                    <button class="btn btn-danger ms-2 mt-1 mb-1" (click)="deletenow(mm.movieid)">delete <i class="fa-solid fa-trash"></i></button>
+                     <button class="btn btn-info ms-2 mt-1 mb-1" (click)="updatecontent(mm)" data-bs-target="#updatemodal" data-bs-toggle="modal">
+                 update <i class="fa-solid fa-pen"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<div *ngIf="updateobj">
+<div class="modal fade" id="updatemodal">
+    <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="d-flex justify-content-center">Update</h1>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                 <div class="form-group">
+                <label for="" class="form-label">Movie Image :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.movieimage">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">Movie Name :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.moviename">
+            </div>
+             <div class="form-group">
+                <label for="" class="form-label">Movie Type :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.movietype">
+            </div>
+             <div class="form-group">
+                <label for="" class="form-label">Movie Price :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.movieprice">
+            </div>
+              <div class="form-group">
+                <label for="" class="form-label">Movie Data :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.moviedata">
+            </div>
+             <div class="form-group">
+                <label for="" class="form-label">Movie Cast :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.moviecast">
+            </div>
+              
+              <div class="form-group">
+                <label for="" class="form-label">Movie Crew :</label>
+                <input type="text" class="form-control" [(ngModel)]="updateobj.moviecrew">
+            </div>
+             
+            
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-warning" (click)="updatenow()" data-bs-dismiss="modal">Update now</button>
+            </div>
+          </div>
+          
+    </div>
+</div>
+</div>

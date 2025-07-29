@@ -1,0 +1,25 @@
+ 
+ <br>
+ <div class="me-5">
+  <table class="table table-bordered">
+  <thead class="table-dark" >
+    <tr>
+      <th>Movie Name</th>
+      <th>Image</th>
+      <th>No of Tickets</th>
+      <th>Booked Date</th>
+      <th>Phone No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of movies">
+      <td><h5>{{ m.moviename }}</h5></td>
+      <td><img [src]="m.movieimage" height="100" width="100" class="img-thumbnail" alt="movie image"></td>
+      <td>{{m.tickets}}</td>
+      <td>{{ m.bookeddate | date: 'dd/MM/yyyy' }}</td>
+     
+      <td>{{ m.phone }}</td>
+    </tr>
+  </tbody>
+</table>
+ </div>

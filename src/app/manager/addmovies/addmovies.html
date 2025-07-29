@@ -1,0 +1,48 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form action="" [formGroup]="movieform" (ngSubmit)="submitmovie()">
+                <div class="form-group">
+                    <label for="" class="form-label">Movie Id :</label>
+                    <input type="text" class="form-control" formControlName="movieid" required="">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">Movie Name :</label>
+                    <input type="text" class="form-control" formControlName="moviename" required="">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Movie Image :</label>
+                    <input type="text" class="form-control" formControlName="movieimage" required="">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Movie Cast :</label>
+                    <input type="text" class="form-control" formControlName="moviecast" required="">
+                </div>
+                  <div class="form-group">
+                    <label for="" class="form-label">Movie Type :</label>
+                    <input type="text" class="form-control" formControlName="movietype" required="">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Movie Crew :</label>
+                 <div class="form-group">
+                   <input type="text" class="form-control" formControlName="moviecrew" required="">
+                </div>
+                </div><div>
+                    <label for="" class="form-label">Movie Price :</label>
+                    <input type="text" class="form-control" formControlName="movieprice" required="">
+                </div>
+                 <div>
+                    <label for="" class="form-label">Movie Data :</label>
+                    <input type="text" class="form-control" formControlName="moviedata" required="">
+                </div>
+                <div class="form-group mt-3">
+                    <button class="btn btn-success ms-5" type="submit">Add Movie</button>
+                    <button class="btn btn-warning ms-3" type="reset">Cancel</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

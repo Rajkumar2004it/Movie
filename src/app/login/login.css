@@ -1,0 +1,22 @@
+#mylogin{
+    background: linear-gradient(to right, #ffe5ec, #ffcdd2, #ffd8be);
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+img{
+    margin-top: 20px;
+    margin-left: 170px;
+}
+#myform{
+
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+margin-top: 60px;
+margin-left: 100px;
+}

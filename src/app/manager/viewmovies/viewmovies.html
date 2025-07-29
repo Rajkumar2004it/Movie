@@ -1,0 +1,24 @@
+<br>
+<div class="container">
+    <div class="row">
+           <h1 class="d-flex justify-content-center">Movies List </h1>
+        <div class="col-md-3" *ngFor="let mm of mymovies">
+               <a  (click)="opendetails(mm.movieid)">
+            <div class="card mt-3 mb-3 ">
+                <div class="card-header">
+                    <img [src]="mm.movieimage" alt="" id="myimg" >
+                     <h4 class="mt-2">{{mm.moviename}}</h4>
+                 
+
+                </div>
+                <div class="card-body">
+                         <p>{{mm.movietype}}</p>
+                </div>
+                <div class="card-footer">
+                      <h3><span class="badge bg-success fs-6"> Price : ₹ {{mm.movieprice}}</span></h3>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>

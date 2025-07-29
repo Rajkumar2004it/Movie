@@ -1,0 +1,20 @@
+.nav-item {
+
+    padding: 30px;
+}
+
+.navbar {
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    padding: 15px 33px;
+     margin-left: -12px;
+}
+
+.navbar a:hover {
+    color: #2e7d32;
+}
+
+.nav-link {
+    color: #0b3d0b;
+    font-weight: bold;
+    text-decoration: none;
+}
